@@ -1,0 +1,13 @@
+{
+  "generator-lmru-module": {
+    "promptValues": {
+      "name": "@core/core",
+      "description": "Core module for app",
+      "version": "0.0.1",
+      "repository": "git@gitlab.lmru.adeo.com:publication-bricks/opus/npm/core_core.git",
+      "main": "src/index.js",
+      "author": "llevkin",
+      "license": "ISC"
+    }
+  }
+}
