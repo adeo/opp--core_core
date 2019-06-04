@@ -1,7 +1,9 @@
 const { assert }         = require('chai');
+const env                = require('@core/env');
 const { core, __conf__ } = require('./../src');
 const Test1              = require('./modules/test1');
 const Test2              = require('./modules/test2');
+const { init, kill }     = require('./fakes');
 
 describe('core', function () {
 
@@ -18,11 +20,21 @@ describe('core', function () {
     });
 
     it('init', () => {
-        console.log(core.$test1[__conf__]);
+        assert.equal(init.subTest1Cb.callCount, 1);
+        assert.equal(init.subTest2Cb.callCount, 2);
     });
 
-    after(async () => {
+    it('conf', () => {
+        assert.deepEqual(env.test1, core.$test1[__conf__]);
+    });
+
+    it('kill', done => {
         process.kill(process.pid, 'SIGINT');
+        setImmediate(() => {
+            assert(kill.subTest1Cb.calledOnce);
+            assert(kill.subTest3Cb.calledOnce);
+            done();
+        });
     });
 
 });
