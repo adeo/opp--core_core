@@ -1,9 +1,9 @@
 const { assert }         = require('chai');
 const env                = require('@core/env');
 const { core, __conf__ } = require('./../src');
+const { init, kill }     = require('./fakes');
 const Test1              = require('./modules/test1');
 const Test2              = require('./modules/test2');
-const { init, kill }     = require('./fakes');
 
 describe('core', function () {
 
