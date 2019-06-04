@@ -12,7 +12,7 @@ imagine that we have project that contains some files:
 
 In .env file we are define settings of our application:
 
-.env:
+*.env:*
 ```dotenv
 testModule2_someString=test
 testModule2_someNumber=(number)123
@@ -23,7 +23,7 @@ __\_\_init\_\___ method will be called on application initialization, __\_\_kill
 method will be called on destructurization, __\_\_name\_\___ static getter indicates
 how you module will be named to be access in __core__ object.
 
-test_module1.js:
+*test_module1.js:*
 ```javascript
 const { __init__, __kill__, __name__ } = require('@core/core');
 
@@ -48,7 +48,7 @@ You can reduce a code of you module by extends from __Module__ class from @core/
 package. In this case __\_\_name\_\___ static getter will return class name with the 
 first letter in lower case.
 
-test_module2.js:
+*test_module2.js:*
 ```javascript
 const { Module, __init__, __kill__, __name__, __conf__ } = require('@core/core');
 
@@ -76,7 +76,7 @@ in .env file:
 }
 ```
 
-index.js:
+*index.js:*
 ```javascript
 const { core }    = require('@core/core');
 const TestModule1 = require('./test_module1');
