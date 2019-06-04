@@ -10,7 +10,7 @@ imagine that we have project that contains some files:
 ./.env
 ```
 
-In .env file we are define settings of ouw application:
+In .env file we are define settings of our application:
 
 .env:
 ```dotenv
@@ -89,6 +89,6 @@ core
     )
     .run();
 
-console.log(core.$testModule1);
-console.log(core.$testModule2);
+console.log(core.$testModule1); // class TestModule1 {}
+console.log(core.$testModule2); // class TestModule2 {}
 ```
