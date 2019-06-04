@@ -89,4 +89,6 @@ core
     )
     .run();
 
+console.log(core.$testModule1);
+console.log(core.$testModule2);
 ```
