@@ -17,7 +17,6 @@ const _kill       = Symbol('_kill');
 const _walk       = Symbol('_walk');
 const _version    = require('./../package').version;
 
-/* istanbul ignore next */
 if (global[_coreInited])
     throw new CoreError.VersionConflict(global[_coreInited], _version);
 global[_coreInited] = _version;
@@ -38,9 +37,9 @@ class Core {
 
     constructor() {
         process.on('SIGINT',  () => this[_kill]());
-        process.on('SIGTERM', /* istanbul ignore next */ () => this[_kill]());
-        process.on('uncaughtException',  /* istanbul ignore next */ e => console.error(e) || process.kill(process.pid, 'SIGINT'));
-        process.on('unhandledRejection', /* istanbul ignore next */ e => console.error(e) || process.kill(process.pid, 'SIGINT'));
+        process.on('SIGTERM', () => this[_kill]());
+        process.on('uncaughtException',  e => console.error(e) || process.kill(process.pid, 'SIGINT'));
+        process.on('unhandledRejection', e => console.error(e) || process.kill(process.pid, 'SIGINT'));
     }
 
     use(...classes) {
@@ -65,11 +64,9 @@ class Core {
 
     [_use](Class) {
         let name = Class[__name__];
-        /* istanbul ignore next */
         if (!name)
             name = _.lowerFirst(Class.name);
         name = '$' + name;
-        /* istanbul ignore next */
         if (this[name])
             throw new CoreError.ModuleNameConflict(name);
         this[name] = new Class();
@@ -93,7 +90,6 @@ class Core {
             path = subname ? [subname, name].join('.') : name;
             if (typeof modules[name] !== 'object')
                 continue;
-            /* istanbul ignore else */
             if (modules[name] instanceof Module)
                 await this[_walk](callback, modules[name], path);
             time = Date.now();
