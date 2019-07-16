@@ -80,7 +80,11 @@ class Core {
         await this[_walk](async (modules, name, path) => {
             if (!modules[name] || !(__kill__ in modules[name]))
                 return;
-            await modules[name][__kill__]();
+            try {
+                await modules[name][__kill__]();
+            } catch (e) {
+                console.error(e);
+            }
             return `Module [${path}] killed at [%s]s`;
         });
         process.exit();
