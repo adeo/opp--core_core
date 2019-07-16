@@ -57,6 +57,8 @@ class Core {
         return this[_walk](async (modules, name, path) => {
             if (!modules[name] || !(__init__ in modules[name]))
                 return;
+            if (!(__core__ in modules[name]))
+                modules[name][__core__] = this;
             await modules[name][__init__]();
             return `Module [${path}] inited at [%s]s`;
         });
