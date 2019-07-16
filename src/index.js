@@ -4,14 +4,14 @@ const env = require('@core/env');
 const { Item } = require('@core/library');
 const { CoreError } = require('./errors');
 
-const __init__ = Symbol('__init__');
-const __kill__ = Symbol('__kill__');
-const __deps__ = Symbol('__deps__');
-const __name__ = Symbol('__name__');
-const __conf__ = Symbol('__conf__');
-const __core__ = Symbol('__core__');
+const __init__ = Symbol.for('__init__');
+const __kill__ = Symbol.for('__kill__');
+const __deps__ = Symbol.for('__deps__');
+const __name__ = Symbol.for('__name__');
+const __conf__ = Symbol.for('__conf__');
+const __core__ = Symbol.for('__core__');
 
-const _coreInited = Symbol('_coreInited');
+const _coreInited = Symbol.for('_coreInited');
 const _use        = Symbol('_use');
 const _kill       = Symbol('_kill');
 const _walk       = Symbol('_walk');
