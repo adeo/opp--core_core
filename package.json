@@ -18,7 +18,7 @@
   "author": "llevkin",
   "license": "ISC",
   "dependencies": {
-    "@core/env": "^0.7.0",
+    "@core/env": "^0.8.0",
     "@core/errors": "0.0.1",
     "@core/library": "0.0.1"
   },
