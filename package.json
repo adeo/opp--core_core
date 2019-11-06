@@ -18,9 +18,9 @@
   "author": "llevkin",
   "license": "MIT",
   "dependencies": {
-    "@core/env": "adeo/core_env",
-    "@core/errors": "adeo/core_errors",
-    "@core/library": "adeo/core_library"
+    "@core/env": "adeo/opp--core_env",
+    "@core/errors": "adeo/opp--core_errors",
+    "@core/library": "adeo/opp--core_library"
   },
   "devDependencies": {
     "chai": "^4.1.2",
