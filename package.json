@@ -16,7 +16,7 @@
   },
   "keywords": [],
   "author": "llevkin",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@core/env": "adeo/core_env",
     "@core/errors": "adeo/core_errors",
