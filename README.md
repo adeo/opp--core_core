@@ -1,6 +1,13 @@
 # @core/core
 This is the core module for buildind node.js applications.
 
+#### Why:
+This module is the way to help you organize you application better. 
+The way to reduce pain and keep mind in severe world of node.js!
+
+#### What:
+Look up on description.
+
 #### Basic usage:
 imagine that we have project that contains some files:
 ```
@@ -92,3 +99,6 @@ core
 console.log(core.$testModule1); // class TestModule1 {}
 console.log(core.$testModule2); // class TestModule2 {}
 ```
+
+## Maintainers
+Leonid Levkin < Leonid.Levkin@leroymerlin.ru >
