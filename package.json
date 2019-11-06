@@ -18,9 +18,9 @@
   "author": "llevkin",
   "license": "ISC",
   "dependencies": {
-    "@core/env": "^0.9.0",
-    "@core/errors": "0.0.1",
-    "@core/library": "0.0.1"
+    "@core/env": "adeo/core_env",
+    "@core/errors": "adeo/core_errors",
+    "@core/library": "adeo/core_library"
   },
   "devDependencies": {
     "chai": "^4.1.2",
