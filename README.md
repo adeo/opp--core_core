@@ -1,12 +1,16 @@
 # @core/core
-This is the core module for buildind node.js applications.
 
 #### Why:
-This module is the way to help you organize you application better. 
-The way to reduce pain and keep mind in severe world of node.js!
+NPM is currently one of the largest repositories.
+It contains modules for almost everything that a developer may need.
+The lack of development standards and the presence of a huge number of different ways to
+build interfaces (events, callbacks, promises) in Node.JS applications pose the problem of 
+creating a single application architecture. This module realize modular 
+architecture with common interface to help you organize you application better.
 
 #### What:
-Look up on description.
+This module is the way to help you organize you application better. 
+The way to reduce pain and keep mind in severe world of node.js!
 
 #### Basic usage:
 imagine that we have project that contains some files:
