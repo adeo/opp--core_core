@@ -1,21 +1,16 @@
 const util = require('util');
 const _ = require('lodash');
+const mod = require('./module');
 const env = require('@core/env');
 const { Item } = require('@core/library');
 const { CoreError } = require('./errors');
+const { __name__, __reg__, __init__, __updt__, __kill__, __conf__, __core__ } = require('./interfaces');
 
-const __init__ = Symbol.for('__init__');
-const __kill__ = Symbol.for('__kill__');
-const __deps__ = Symbol.for('__deps__');
-const __name__ = Symbol.for('__name__');
-const __conf__ = Symbol.for('__conf__');
-const __core__ = Symbol.for('__core__');
-
-const _coreInited = Symbol.for('_coreInited');
-const _use        = Symbol('_use');
-const _kill       = Symbol('_kill');
-const _walk       = Symbol('_walk');
-const _version    = require('./../package').version;
+const _coreInited    = Symbol.for('_coreInited');
+const _use           = Symbol('_use');
+const _kill          = Symbol('_kill');
+const _walk          = Symbol('_walk');
+const _version       = require('./../package').version;
 
 if (global[_coreInited])
     throw new CoreError.VersionConflict(global[_coreInited], _version);
@@ -109,9 +104,11 @@ class Core {
 
 module.exports.core     = new Core();
 module.exports.Module   = Module;
+module.exports.mod      = mod;
 module.exports.__init__ = __init__;
+module.exports.__reg__  = __reg__;
 module.exports.__kill__ = __kill__;
-module.exports.__deps__ = __deps__;
+module.exports.__updt__ = __updt__;
 module.exports.__name__ = __name__;
 module.exports.__conf__ = __conf__;
 module.exports.__core__ = __core__;

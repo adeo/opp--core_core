@@ -1,0 +1,10 @@
+exports.__init__       = Symbol.for('__init__');
+exports.__reg__        = Symbol.for('__reg__');
+exports.__kill__       = Symbol.for('__kill__');
+exports.__updt__       = Symbol.for('__updt__');
+exports.__name__       = Symbol.for('__name__');
+exports.__conf__       = Symbol.for('__conf__');
+exports.__core__       = Symbol.for('__core__');
+exports.__state__      = Symbol.for('__state__');
+exports.__parents__    = Symbol.for('__parents__');
+exports.__singletone__ = Symbol.for('__singletone__');

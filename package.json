@@ -1,6 +1,6 @@
 {
   "name": "@core/core",
-  "version": "0.11.0",
+  "version": "2.0.0",
   "description": "Core module for app",
   "main": "src/index.js",
   "repository": {
@@ -28,7 +28,7 @@
     "http-server": "^0.11.1",
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.2.0",
-    "rewiremock": "^3.13.4",
-    "sinon": "^7.3.0"
+    "rewiremock": "^3.13.9",
+    "sinon": "^7.5.0"
   }
 }
