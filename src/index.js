@@ -16,7 +16,7 @@ if (global[_coreInited])
     throw new CoreError.VersionConflict(global[_coreInited], _version);
 global[_coreInited] = _version;
 
-class Module extends Item {
+class Module extends mod(Item) {
 
     static get [__name__]() {
         return _.lowerFirst(this.name);
